@@ -1,0 +1,19 @@
+{
+  "ACTIONS": [
+    "rds:Add*",
+    "rds:Apply*",
+    "rds:Authorize*",
+    "rds:Backtrack*",
+    "rds:Copy*",
+    "rds:Download*",
+    "rds:Import*",
+    "rds:Modify*",
+    "rds:Reset*"
+  ],
+
+  "RESOURCES": [
+    "arn:aws:rds:us-east-1:999999999999:cluster:aurora-01",
+    "arn:aws:rds:us-east-1:999999999999:cluster:aurora-02",
+    "arn:aws:rds:us-east-1:999999999999:cluster:aurora-03"
+  ]
+}

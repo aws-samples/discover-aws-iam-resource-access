@@ -1,0 +1,10 @@
+{
+  "ACTIONS": [
+    "iam:AssumeRole",
+    "iam:PassRole"
+  ],
+
+  "RESOURCES": [
+    "arn:aws:iam::999999999999:role/AuroraRoleFull"
+  ]
+}
