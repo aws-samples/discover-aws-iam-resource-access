@@ -148,10 +148,10 @@ This script exclusively analyzes identity policies. It does not analyze resource
 the latter can grant access, and such access would not be identified by this script. This would lead to a false
 negative.
 
-As of the time of this writing, the AWS resources that support resource policies are: Amazon S3 Buckets, Amazon SQS
-Queues, Amazon VPC Endpoints, and AWS KMS Keys
+Please see the following for more information on resource policies and the services that support them:
 
-See: [Identity-based Policies and Resource-Based Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_identity-vs-resource.html)
+* [Identity-based Policies and Resource-Based Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_identity-vs-resource.html)
+* [AWS Services that Work with IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html)
 
 ### IAM Policy Conditions
 
