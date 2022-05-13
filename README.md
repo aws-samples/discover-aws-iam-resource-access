@@ -17,6 +17,7 @@ No installation is required.  Simply execute the discover-aws-iam-resource-acces
     * Developed using Python 3.11
 * Third-Party Python Libraries
     * Missing libraries will be identified at time of execution.
+    * Or, see the [requirements.txt](requirements.txt) file.
     * Or, see the "Imports" section at the top of the discovery-aws-iam-resource-access.py file.
 
 # Usage
