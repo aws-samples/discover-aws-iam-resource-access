@@ -23,13 +23,13 @@ Discover AWS IAM identities (users and roles) with specified access to specified
 
 import sys
 import time
+import json
 import argparse
 from datetime import datetime, timezone, timedelta
 
 from src.colorize import Colorize
 
 try:
-  import json
   import boto3
   import pandas
   import colorama
