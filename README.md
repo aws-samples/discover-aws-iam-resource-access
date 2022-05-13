@@ -13,8 +13,8 @@ No installation is required.  Simply execute the discover-aws-iam-resource-acces
 
 ### Dependencies
 
-* Python 3.x
-    * Developed using Python 3.11
+* Python 3.9+
+    * Developed using Python 3.10.
 * Third-Party Python Libraries
     * Missing libraries will be identified at time of execution.
     * Or, see the [requirements.txt](requirements.txt) file.
