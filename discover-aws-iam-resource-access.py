@@ -56,7 +56,7 @@ if sys.version_info < (3, 9):
 ########################################################################################################################
 
 # IAM actions that indirectly provide elevated access.
-IAM_ROLE_ACTIONS = ['iam:AssumeRole', 'iam:PassRole']
+IAM_ROLE_ACTIONS = ['sts:AssumeRole', 'iam:PassRole']
 IAM_POLICY_ACTIONS = ['iam:Attach*', 'iam:Create*', 'iam:Delete*', 'iam:Put*', 'iam:SetDefaultPolicyVersion', 'iam:Update*']
 
 
@@ -130,7 +130,7 @@ def GetCurrentDateTimeString():
 def SimulatePrincipalPolicy(iam, arn, actions, resources):
   """Wrap call to IAM SimulatePrincipalPolicy API."""
 
-  # A single call to IAM SimulatePrincipalPolicy cannot check both the iam:PassRole and iam:AssumeRole actions,
+  # A single call to IAM SimulatePrincipalPolicy cannot check both the iam:PassRole and sts:AssumeRole actions,
   # as according to the error message they "require different authorization information". So, detect this case
   # and scatter/gather.
   if all(a in actions for a in IAM_ROLE_ACTIONS):

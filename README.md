@@ -85,7 +85,7 @@ Tables showing access for IAM roles and users are displayed as script output:
 | ------ | ----------- |
 | DIRECT | Access per identity policy. |
 | IAM_API | Access per iam:Attach*, iam:Create*, iam:Put*, etc. |
-| IAM_ROLE | Access per iam:AssumeRole or iam:PassRole. |
+| IAM_ROLE | Access per sts:AssumeRole or iam:PassRole. |
 | TRUSTS | Indicates presence of external account trust entity. |
 
 A table value of "skip" indicates that the check was skipped because the identity was already known to have another
@@ -129,7 +129,7 @@ access as specified by the parameter file.
 Second, it checks each role for indirect access via iam:Attach*, iam:Create*, iam:Put*, etc., any of which could be used
 by an identity to leverage some *other* role's direct (or indirect) access.
 
-Third, it does the same for iam:AssumeRole and iam:PassRole for the same reason. In this case, anytime an additional
+Third, it does the same for sts:AssumeRole and iam:PassRole for the same reason. In this case, anytime an additional
 role is found to have indirect access, all other roles must be re-checked against this additional role. I.e., the chain
 of indirect access could in theory be very very long (coincidentally or as an attempt to obfuscate access).
 
