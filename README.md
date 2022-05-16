@@ -84,7 +84,7 @@ Tables showing access for IAM roles and users are displayed as script output:
 | Column | Description |
 | ------ | ----------- |
 | DIRECT | Access per identity policy. |
-| IAM_API | Access per iam:Attach*, iam:Create* or iam:Put*. |
+| IAM_API | Access per iam:Attach*, iam:Create*, iam:Put*, etc. |
 | IAM_ROLE | Access per iam:AssumeRole or iam:PassRole. |
 | TRUSTS | Indicates presence of external account trust entity. |
 
@@ -126,7 +126,7 @@ The **discover-aws-iam-resource-access.py** script works approximately as follow
 First, it retrieves a list of IAM roles and uses the IAM SimulatePrincipalPolicy API to check each role for direct
 access as specified by the parameter file.
 
-Second, it checks each role for indirect access via iam:Attach*, iam:Create* or iam:Put*, any of which could be used
+Second, it checks each role for indirect access via iam:Attach*, iam:Create*, iam:Put*, etc., any of which could be used
 by an identity to leverage some *other* role's direct (or indirect) access.
 
 Third, it does the same for iam:AssumeRole and iam:PassRole for the same reason. In this case, anytime an additional

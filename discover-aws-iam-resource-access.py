@@ -57,7 +57,7 @@ if sys.version_info < (3, 9):
 
 # IAM actions that indirectly provide elevated access.
 IAM_ROLE_ACTIONS = ['iam:AssumeRole', 'iam:PassRole']
-IAM_POLICY_ACTIONS = ['iam:Attach*', 'iam:Create*', 'iam:Put*']
+IAM_POLICY_ACTIONS = ['iam:Attach*', 'iam:Create*', 'iam:Delete*', 'iam:Put*', 'iam:SetDefaultPolicyVersion', 'iam:Update*']
 
 
 
